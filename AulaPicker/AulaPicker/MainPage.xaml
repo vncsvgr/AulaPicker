@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AulaPicker.MainPage">
+
+    <StackLayout>
+
+        <Picker x:Name="pckSexo" Title="Selecione o sexo">
+            <Picker.Items>
+                <x:String>Masculino</x:String>
+                <x:String>Feminino</x:String>
+                <x:String>Outros</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Picker x:Name="pckEstadoCivil" Title="Estado Civil" SelectedIndexChanged="pckEstadoCivil_SelectedIndexChanged"/>
+            
+        <Picker x:Name="pckCurso" Title="Selecione o curso" ItemDisplayBinding="{Binding Nome}" />
+
+        <Button x:Name="btnVerificar" Text="Verificar Curso e Período" Clicked="btnVerificar_Clicked" />
+
+        <Label x:Name="lblCurso" HorizontalOptions="Center" FontSize="36" FontAttributes="Bold" />
+        <Label x:Name="lblPeriodo" HorizontalOptions="Center" FontSize="32" FontAttributes="Bold" />
+        
+    </StackLayout>
+
+</ContentPage>
